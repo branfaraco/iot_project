@@ -1,0 +1,12 @@
+hugging_face
+hugging_face_backup
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+no-repo
+
+trash
