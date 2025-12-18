@@ -24,15 +24,12 @@ const LbcsMap: React.FC = () => {
   });
 
   useEffect(() => {
-    // Load GeoJSON from the public folder.  Vite serves files under
-    // `public/` at the root URL during development and as static assets
-    // in production.
+
     fetch("/lbcs.geojson")
       .then((res) => res.json())
       .then((fc: FeatureCollection) => {
         setData(fc);
-        // Compute a simple centroid by averaging all coordinates so
-        // the map view is centred over the dataset.
+
         const coords: [number, number][] = [];
         for (const feature of fc.features) {
           const geom: any = feature.geometry;

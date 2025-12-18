@@ -1,27 +1,3 @@
-"""
-Preprocessing functions for history windows
------------------------------------------
-
-The models used in this project expect their inputs in the format
-``(batch, channels, height, width)``.  For traffic prediction the
-channels dimension is constructed by concatenating multiple past
-frames along the channel axis.  Each raw traffic frame has shape
-``(H, W, C)`` where ``C`` is the number of raw traffic channels (8 in
-the provided models).  A history window of ``HISTORY_STEPS`` past
-frames therefore yields a tensor of shape ``(HISTORY_STEPS * C, H, W)``.
-
-When using the FiLM conditioned model, additional channels
-representing land use (LBCS) codes are concatenated to the traffic
-channels.  The LBCS codes are one‑hot encoded and upsampled to
-``(LBCS_CLASSES, H, W)``.  To incorporate land use information over
-time the one‑hot channels are repeated ``HISTORY_STEPS`` times and
-concatenated with the traffic history to yield a tensor of shape
-``((HISTORY_STEPS * (C + LBCS_CLASSES)), H, W)``.
-
-The functions in this module perform the reshaping and conversion
-from ``numpy`` arrays to PyTorch tensors.  They add a leading batch
-dimension so that the result can be passed directly to the models.
-"""
 
 from __future__ import annotations
 
@@ -122,7 +98,35 @@ def prepare_inputs_enriched(x_enriched: Union[np.ndarray, torch.Tensor]) -> torc
     return torch.tensor(flat, dtype=torch.float32).unsqueeze(0)
 
 
-__all__ = [
-    "prepare_inputs_raw",
-    "prepare_inputs_enriched",
-]
+
+def preprocess_frame(arr: np.ndarray) -> np.ndarray:
+    """Crop a single frame to the region of interest and normalise to [0,1].
+
+    The shared ``data_reduction`` module defines the row and column indices
+    for the crop.  This function assumes the frame has shape ``(H, W, C)``.
+
+    Parameters
+    ----------
+    arr : np.ndarray
+        Input frame with dimensions ``(H, W, C)``.
+
+    Returns
+    -------
+    np.ndarray
+        Cropped and normalised frame of shape ``(H_roi, W_roi, C)``.
+
+    Raises
+    ------
+    ValueError
+        If the array does not have 3 dimensions or is too small for the crop.
+    """
+    from shared.utils.data_reduction import r0, r1, c0, c1  # type: ignore
+    if arr.ndim != 3:
+        raise ValueError(f"Expected frame with 3 dims (H,W,C), got shape {arr.shape}")
+    H, W, C = arr.shape
+    if r1 > H or c1 > W:
+        raise ValueError(
+            f"Frame of shape {arr.shape} is too small for crop r0={r0}, r1={r1}, c0={c0}, c1={c1}"
+        )
+    cropped = arr[r0:r1, c0:c1, :]
+    return cropped.astype(np.float32) / 255.0

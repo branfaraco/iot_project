@@ -1,7 +1,11 @@
 import os, glob, h5py, numpy as np, warnings
 import json
 
-DATA_ROOT = r"C:\Users\user\UPM\Imperial-4año\IoT\Github\hugging_face"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATA_ROOT = os.environ["DATA_ROOT"]
 
 # ----- CONFIG -----
 data_dir = os.path.join(DATA_ROOT, "BERLIN", "BERLIN", "training")
@@ -68,39 +72,9 @@ sub_max_lon = min_lon + c1 * lon_step
 
 
 
+
+
 def process_all_files():
-    for fname in test_files:
-        in_path  = os.path.join(data_dir, fname)
-
-        if not os.path.exists(in_path):
-            print("WARNING: Missing file:", in_path)
-            continue
-
-        print("Processing (raw test):", fname)
-
-        with h5py.File(in_path, "r") as f:
-            arr = f["array"][()]  # full unprocessed
-
-        arr_proc = temporal_crop(arr, T_START, T_END) # temporal crop donne to everyone
-
-        raw_out_path = os.path.join(test_raw_dir, fname)
-        with h5py.File(raw_out_path, "w") as f_raw:
-            f_raw.create_dataset("array", data=arr_proc,
-                                 compression="gzip", compression_opts=4)
-
-    print("Unprocessed test files saved in:", test_raw_dir)
-
-    # clean up extra raw test files
-    existing_test_raw = glob.glob(os.path.join(test_raw_dir, "*.h5"))
-    test_files_to_keep = {os.path.join(test_raw_dir, f) for f in test_files}
-
-    for path in existing_test_raw:
-        if path not in test_files_to_keep:
-            print("Removing from test/:", os.path.basename(path))
-            os.remove(path)
-
-
-def process_all_files_():
     for fname in files_to_process:
         in_path  = os.path.join(data_dir, fname)
         out_path = os.path.join(out_dir, fname)
@@ -153,6 +127,51 @@ def process_all_files_():
             print("Removing from test/:", os.path.basename(path))
             os.remove(path)
 
+def save_metadata():
+    rows = r1 - r0
+    cols = c1 - c0
+
+    metadata = {
+        "rows": rows,
+        "cols": cols,
+        "bbox": [
+            [sub_min_lat, sub_min_lon],   # southwest
+            [sub_max_lat, sub_max_lon],   # northeast
+        ],
+    }
+
+    meta_path = os.path.join(DATA_ROOT, "BERLIN_reduced", "metadata.json")
+    os.makedirs(os.path.dirname(meta_path), exist_ok=True)
+
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=2)
+
+    print("Saved metadata to:", meta_path)
+
+
+
+def reduce_static_mask():
+    mask_path = os.path.join(DATA_ROOT, "BERLIN", "BERLIN", "BERLIN_static.h5")
+    out_path  = os.path.join(DATA_ROOT, "BERLIN_reduced", "BERLIN_static.h5")
+
+    if not os.path.exists(mask_path):
+        print("WARNING: Missing static mask file:", mask_path)
+        return
+
+    with h5py.File(mask_path, "r") as f:
+        static = f["array"][()]  # expected (C, H, W)
+
+    static_crop = static[:, r0:r1, c0:c1]  # (C, H_roi, W_roi)
+
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with h5py.File(out_path, "w") as f:
+        f.create_dataset("array", data=static_crop,
+                         compression="gzip", compression_opts=4)
+
+    print("Saved reduced static mask:", out_path, "shape:", static_crop.shape)
+
 
 if __name__ == "__main__":
-    process_all_files()
+    save_metadata()
+    reduce_static_mask()
+    process_all_files()   

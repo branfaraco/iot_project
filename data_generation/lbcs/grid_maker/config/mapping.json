@@ -1,0 +1,1624 @@
+{
+    "building:yes": [
+        "1000"
+    ],
+    "building:house": [
+        "1150"
+    ],
+    "building:residential": [
+        "1180"
+    ],
+    "building:detached": [
+        "1100"
+    ],
+    "building:garage": [
+        "2000"
+    ],
+    "building:apartments": [
+        "1180",
+        "1155",
+        "1176"
+    ],
+    "building:industrial": [
+        "3115"
+    ],
+    "building:farm_auxiliary": [
+        "9200"
+    ],
+    "building:terrace": [
+        "1100"
+    ],
+    "building:semidetached_house": [
+        "1100"
+    ],
+    "building:commercial": [
+        "2000",
+        "2117"
+    ],
+    "building:school": [
+        "6100"
+    ],
+    "building:retail": [
+        "2115",
+        "2135"
+    ],
+    "building:construction": [
+        "7110"
+    ],
+    "building:barn": [
+        "9000"
+    ],
+    "building:cabin": [
+        "1100"
+    ],
+    "building:service": [
+        "2000"
+    ],
+    "building:static_caravan": [
+        "1100"
+    ],
+    "building:warehouse": [
+        "3610",
+        "3510"
+    ],
+    "building:church": [
+        "1000"
+    ],
+    "building:farm": [
+        "9110",
+        "9220"
+    ],
+    "building:bungalow": [
+        "1155"
+    ],
+    "building:office": [
+        "7000"
+    ],
+    "building:allotment_house": [
+        "9000"
+    ],
+    "building:carport": [
+        "1000"
+    ],
+    "building:ruins": [
+        "1000"
+    ],
+    "building:civic": [
+        "6200"
+    ],
+    "building:public": [
+        "6200"
+    ],
+    "building:university": [
+        "6100"
+    ],
+    "building:hospital": [
+        "6500"
+    ],
+    "building:hotel": [
+        "1332"
+    ],
+    "building:boathouse": [
+        "4000"
+    ],
+    "building:kindergarten": [
+        "6100"
+    ],
+    "building:chapel": [
+        "6600"
+    ],
+    "building:manufacture": [
+        "3110"
+    ],
+    "building:mosque": [
+        "6600"
+    ],
+    "building:ger": [
+        "1190",
+        "1165"
+    ],
+    "building:storage_tank": [
+        "4320"
+    ],
+    "building:hangar": [
+        "4113"
+    ],
+    "building:dormitory": [
+        "1320"
+    ],
+    "building:train_station": [
+        "4121"
+    ],
+    "building:college": [
+        "6100"
+    ],
+    "building:stable": [
+        "7100"
+    ],
+    "building:transformer_tower": [
+        "4000",
+        "4312"
+    ],
+    "building:transportation": [
+        "4180",
+        "4141",
+        "4111"
+    ],
+    "building:slurry_tank": [
+        "9200",
+        "9231"
+    ],
+    "building:semi": [
+        "1000"
+    ],
+    "building:cowshed": [
+        "9000"
+    ],
+    "building:temple": [
+        "1000"
+    ],
+    "building:government": [
+        "6000"
+    ],
+    "building:sty": [
+        "9000"
+    ],
+    "building:toilets": [
+        "1000"
+    ],
+    "building:parking": [
+        "2000"
+    ],
+    "building:fire_station": [
+        "1000",
+        "6400"
+    ],
+    "building:commercial;residential": [
+        "1180",
+        "2000"
+    ],
+    "building:grandstand": [
+        "1300",
+        "5000",
+        "5315"
+    ],
+    "building:kiosk": [
+        "2000",
+        "2180"
+    ],
+    "building:agricultural": [
+        "9000"
+    ],
+    "building:houseboat": [
+        "1000"
+    ],
+    "building:sports_centre": [
+        "5370"
+    ],
+    "building:stilt_house": [
+        "1000"
+    ],
+    "building:pavilion": [
+        "5000",
+        "5370"
+    ],
+    "building:supermarket": [
+        "2500",
+        "2180",
+        "2151"
+    ],
+    "building:trullo": [
+        "1100"
+    ],
+    "building:tent": [
+        "1000"
+    ],
+    "building:kitchen": [
+        "1000"
+    ],
+    "building:religious": [
+        "6640"
+    ],
+    "building:conservatory": [
+        "5000",
+        "5234"
+    ],
+    "building:duplex": [
+        "1000"
+    ],
+    "building:pajaru": [
+        "1000"
+    ],
+    "building:bridge": [
+        "4110"
+    ],
+    "building:dam": [
+        "4000",
+        "7100"
+    ],
+    "building:shrine": [
+        "1000"
+    ],
+    "building:chalet": [
+        "1000",
+        "1330"
+    ],
+    "building:dwelling_house": [
+        "1120"
+    ],
+    "building:clinic": [
+        "1000",
+        "6510"
+    ],
+    "building:factory": [
+        "3100",
+        "3111"
+    ],
+    "building:mobile_home": [
+        "1000"
+    ],
+    "building:shop": [
+        "2000"
+    ],
+    "building:presbytery": [
+        "1000",
+        "6000"
+    ],
+    "building:cathedral": [
+        "1000",
+        "6000"
+    ],
+    "building:government_office": [
+        "6210"
+    ],
+    "building:castle": [
+        "7130"
+    ],
+    "building:proposed": [
+        "7000"
+    ],
+    "building:hayrack": [
+        "7100"
+    ],
+    "building:pub": [
+        "2000"
+    ],
+    "building:gatehouse": [
+        "4100"
+    ],
+    "building:poultry_house": [
+        "9000"
+    ],
+    "building:monastery": [
+        "6630"
+    ],
+    "building:riding_hall": [
+        "5000"
+    ],
+    "building:gazebo": [
+        "1000"
+    ],
+    "building:restaurant": [
+        "2510"
+    ],
+    "building:storage": [
+        "7130"
+    ],
+    "building:summer_cottage": [
+        "1100"
+    ],
+    "building:terraced_house": [
+        "1000"
+    ],
+    "building:store": [
+        "2000",
+        "2130",
+        "2117",
+        "2121",
+        "2145"
+    ],
+    "building:bank": [
+        "4000",
+        "2212"
+    ],
+    "building:community_group_office": [
+        "6833"
+    ],
+    "building:chicken_coop": [
+        "9000"
+    ],
+    "building:livestock": [
+        "1000"
+    ],
+    "building:terrace_house": [
+        "1100"
+    ],
+    "building:granary": [
+        "9111"
+    ],
+    "building:power_substation": [
+        "4310"
+    ],
+    "building:utility": [
+        "4000",
+        "4310"
+    ],
+    "building:barracks": [
+        "1000"
+    ],
+    "building:annexe": [
+        "1100"
+    ],
+    "building:flats": [
+        "1120"
+    ],
+    "building:terraced": [
+        "1100"
+    ],
+    "building:education": [
+        "6145",
+        "6123",
+        "6133"
+    ],
+    "building:museum": [
+        "5211"
+    ],
+    "building:water_tower": [
+        "4330"
+    ],
+    "building:deck": [
+        "7000",
+        "7130",
+        "7380"
+    ],
+    "building:tulou": [
+        "6600"
+    ],
+    "building:wall": [
+        "6000"
+    ],
+    "building:townhouse": [
+        "1100"
+    ],
+    "building:gasometer": [
+        "3300",
+        "4310",
+        "3315"
+    ],
+    "building:cottage": [
+        "1100"
+    ],
+    "building:electricity": [
+        "3300",
+        "4310"
+    ],
+    "building:bakehouse": [
+        "1000"
+    ],
+    "building:marketplace": [
+        "2110",
+        "2131",
+        "2124"
+    ],
+    "building:substation": [
+        "4310"
+    ],
+    "building:hall": [
+        "5000"
+    ],
+    "building:summer_house": [
+        "6000"
+    ],
+    "building:sport": [
+        "5380"
+    ],
+    "building:police": [
+        "1000"
+    ],
+    "building:plot": [
+        "7120"
+    ],
+    "building:maisonette": [
+        "1100"
+    ],
+    "building:toilets;shower": [
+        "6000"
+    ],
+    "building:village_office": [
+        "6200"
+    ],
+    "building:yurt": [
+        "1000"
+    ],
+    "building:elevator": [
+        "2310"
+    ],
+    "building:community_centre": [
+        "6100"
+    ],
+    "building:bunglows": [
+        "1100"
+    ],
+    "building:barrier": [
+        "7100"
+    ],
+    "building:clubhouse": [
+        "5000"
+    ],
+    "building:tech_cab": [
+        "4000"
+    ],
+    "building:market": [
+        "2000",
+        "2110",
+        "2124"
+    ],
+    "building:portable_classroom": [
+        "1000",
+        "6100"
+    ],
+    "building:ucap": [
+        "8000"
+    ],
+    "building:data_center": [
+        "3300"
+    ],
+    "building:car_repair": [
+        "2174",
+        "2117"
+    ],
+    "building:kiln": [
+        "3400"
+    ],
+    "building:parking_entrance": [
+        "2800"
+    ],
+    "building:windmill": [
+        "3000"
+    ],
+    "building:ship": [
+        "4153"
+    ],
+    "building:convent": [
+        "6630"
+    ],
+    "building:motel": [
+        "1330"
+    ],
+    "building:power": [
+        "4310"
+    ],
+    "building:library": [
+        "6100"
+    ],
+    "building:healthcare": [
+        "6513"
+    ],
+    "building:station": [
+        "4100"
+    ],
+    "building:semidetached": [
+        "1120"
+    ],
+    "building:wayside_chapel": [
+        "1000"
+    ],
+    "building:villa": [
+        "1100"
+    ],
+    "building:funeral_hall": [
+        "1000",
+        "6000"
+    ],
+    "building:demountable": [
+        "7100"
+    ],
+    "building:semi_detached": [
+        "1120"
+    ],
+    "building:detached_house": [
+        "1100"
+    ],
+    "building:barrack": [
+        "1000"
+    ],
+    "building:garbage_shed": [
+        "3000"
+    ],
+    "building:unit": [
+        "1150",
+        "1176"
+    ],
+    "building:brewery": [
+        "3115"
+    ],
+    "building:dovecote": [
+        "1000"
+    ],
+    "building:townhall": [
+        "6210"
+    ],
+    "building:transformer": [
+        "4310"
+    ],
+    "building:block": [
+        "7120"
+    ],
+    "landuse:farmland": [
+        "9114"
+    ],
+    "landuse:residential": [
+        "1120",
+        "1155",
+        "1176"
+    ],
+    "landuse:grass": [
+        "9000"
+    ],
+    "landuse:forest": [
+        "8000",
+        "9420"
+    ],
+    "landuse:meadow": [
+        "9000"
+    ],
+    "landuse:orchard": [
+        "9130"
+    ],
+    "landuse:farmyard": [
+        "9000",
+        "9220"
+    ],
+    "landuse:industrial": [
+        "3300"
+    ],
+    "landuse:vineyard": [
+        "9130"
+    ],
+    "landuse:commercial": [
+        "2420"
+    ],
+    "landuse:allotments": [
+        "9000"
+    ],
+    "landuse:retail": [
+        "2100",
+        "2117",
+        "2133"
+    ],
+    "landuse:basin": [
+        "4000"
+    ],
+    "landuse:quarry": [
+        "8510"
+    ],
+    "landuse:construction": [
+        "7130"
+    ],
+    "landuse:recreation_ground": [
+        "5380",
+        "5377"
+    ],
+    "landuse:religious": [
+        "6640"
+    ],
+    "landuse:greenhouse_horticulture": [
+        "6000"
+    ],
+    "landuse:garages": [
+        "1100"
+    ],
+    "landuse:railway": [
+        "4120"
+    ],
+    "landuse:greenfield": [
+        "7120"
+    ],
+    "landuse:aquaculture": [
+        "9100"
+    ],
+    "landuse:logging": [
+        "7000"
+    ],
+    "landuse:plant_nursery": [
+        "6000"
+    ],
+    "landuse:education": [
+        "6110",
+        "6121"
+    ],
+    "landuse:highway": [
+        "4130"
+    ],
+    "landuse:animal_keeping": [
+        "9400",
+        "9360"
+    ],
+    "landuse:plantation": [
+        "9000"
+    ],
+    "landuse:conservation": [
+        "9000"
+    ],
+    "landuse:farm": [
+        "9155",
+        "9235",
+        "9114"
+    ],
+    "landuse:winter_sports": [
+        "5350",
+        "5381",
+        "5374"
+    ],
+    "landuse:apiary": [
+        "9370"
+    ],
+    "landuse:harbour": [
+        "4153"
+    ],
+    "landuse:reservoir_watershed": [
+        "4000"
+    ],
+    "landuse:churchyard": [
+        "6600",
+        "6720"
+    ],
+    "landuse:institutional": [
+        "6310"
+    ],
+    "landuse:depot": [
+        "4123"
+    ],
+    "landuse:clearing": [
+        "3000"
+    ],
+    "landuse:school": [
+        "6700",
+        "6121"
+    ],
+    "landuse:paddy": [
+        "9100"
+    ],
+    "landuse:civic_admin": [
+        "6210",
+        "6310"
+    ],
+    "landuse:mine": [
+        "8000",
+        "8191"
+    ],
+    "landuse:agriculture": [
+        "9200"
+    ],
+    "landuse:greenhouse": [
+        "9100"
+    ],
+    "landuse:scrub": [
+        "9000"
+    ],
+    "landuse:peat_cutting": [
+        "8000"
+    ],
+    "landuse:governmental": [
+        "1000",
+        "6300"
+    ],
+    "landuse:storage": [
+        "2000"
+    ],
+    "landuse:government": [
+        "1000",
+        "6300"
+    ],
+    "landuse:sand": [
+        "8510"
+    ],
+    "landuse:livestock": [
+        "9300"
+    ],
+    "landuse:healthcare": [
+        "6500"
+    ],
+    "landuse:road": [
+        "4000"
+    ],
+    "landuse:garden": [
+        "9500"
+    ],
+    "landuse:public": [
+        "6400"
+    ],
+    "amenity:restaurant": [
+        "2510",
+        "5330"
+    ],
+    "amenity:place_of_worship": [
+        "6610"
+    ],
+    "amenity:school": [
+        "6100",
+        "6121"
+    ],
+    "amenity:bicycle_parking": [
+        "4000"
+    ],
+    "amenity:fast_food": [
+        "2522"
+    ],
+    "amenity:cafe": [
+        "2520"
+    ],
+    "amenity:shelter": [
+        "1000"
+    ],
+    "amenity:fuel": [
+        "2000",
+        "4100",
+        "2170",
+        "2117"
+    ],
+    "amenity:recycling": [
+        "2000",
+        "6000",
+        "2180"
+    ],
+    "amenity:toilets": [
+        "2000",
+        "6000"
+    ],
+    "amenity:pharmacy": [
+        "2000",
+        "6000",
+        "2161"
+    ],
+    "amenity:bank": [
+        "1000"
+    ],
+    "amenity:drinking_water": [
+        "4300"
+    ],
+    "amenity:kindergarten": [
+        "6110"
+    ],
+    "amenity:vending_machine": [
+        "2000",
+        "2170"
+    ],
+    "amenity:hunting_stand": [
+        "5300",
+        "9500"
+    ],
+    "amenity:waste_disposal": [
+        "2000",
+        "2330"
+    ],
+    "amenity:bar": [
+        "5000"
+    ],
+    "amenity:atm": [
+        "4200"
+    ],
+    "amenity:hospital": [
+        "6530",
+        "6430"
+    ],
+    "amenity:post_office": [
+        "4200"
+    ],
+    "amenity:clinic": [
+        "6512"
+    ],
+    "amenity:pub": [
+        "5380"
+    ],
+    "amenity:community_centre": [
+        "5000"
+    ],
+    "amenity:doctors": [
+        "6511"
+    ],
+    "amenity:fountain": [
+        "5000"
+    ],
+    "amenity:townhall": [
+        "6310",
+        "6210"
+    ],
+    "amenity:grave_yard": [
+        "6600"
+    ],
+    "amenity:police": [
+        "4000"
+    ],
+    "amenity:social_facility": [
+        "2000"
+    ],
+    "amenity:charging_station": [
+        "4160"
+    ],
+    "amenity:fire_station": [
+        "4000",
+        "6410"
+    ],
+    "amenity:dentist": [
+        "2000",
+        "6511",
+        "2410"
+    ],
+    "amenity:car_wash": [
+        "2000"
+    ],
+    "amenity:library": [
+        "5000"
+    ],
+    "amenity:marketplace": [
+        "2000",
+        "2180"
+    ],
+    "amenity:telephone": [
+        "4200"
+    ],
+    "amenity:bicycle_rental": [
+        "4000"
+    ],
+    "amenity:childcare": [
+        "6000",
+        "6110"
+    ],
+    "amenity:college": [
+        "6130"
+    ],
+    "amenity:bus_station": [
+        "4131"
+    ],
+    "amenity:parcel_locker": [
+        "2000"
+    ],
+    "amenity:veterinary": [
+        "6500"
+    ],
+    "amenity:university": [
+        "6100"
+    ],
+    "amenity:ice_cream": [
+        "5000",
+        "2153"
+    ],
+    "amenity:theatre": [
+        "5114"
+    ],
+    "amenity:taxi": [
+        "4130"
+    ],
+    "amenity:public_building": [
+        "6300"
+    ],
+    "amenity:motorcycle_parking": [
+        "4000"
+    ],
+    "amenity:ferry_terminal": [
+        "4151"
+    ],
+    "amenity:grit_bin": [
+        "4000",
+        "4340"
+    ],
+    "amenity:public_bookcase": [
+        "5000"
+    ],
+    "amenity:driving_school": [
+        "2000"
+    ],
+    "amenity:cinema": [
+        "5100"
+    ],
+    "amenity:shower": [
+        "6500"
+    ],
+    "amenity:courthouse": [
+        "6300"
+    ],
+    "amenity:car_rental": [
+        "4100"
+    ],
+    "amenity:clock": [
+        "5000"
+    ],
+    "amenity:loading_dock": [
+        "4000",
+        "7100",
+        "4140"
+    ],
+    "amenity:events_venue": [
+        "5140"
+    ],
+    "amenity:arts_centre": [
+        "5116"
+    ],
+    "amenity:watering_place": [
+        "9500"
+    ],
+    "amenity:nightclub": [
+        "5000"
+    ],
+    "amenity:bureau_de_change": [
+        "2000"
+    ],
+    "amenity:bicycle_repair_station": [
+        "7000"
+    ],
+    "amenity:food_court": [
+        "5300"
+    ],
+    "amenity:studio": [
+        "5100"
+    ],
+    "amenity:trolley_bay": [
+        "4139"
+    ],
+    "amenity:internet_cafe": [
+        "2000"
+    ],
+    "amenity:prison": [
+        "6300"
+    ],
+    "amenity:payment_terminal": [
+        "2000"
+    ],
+    "amenity:nursing_home": [
+        "1200"
+    ],
+    "amenity:monastery": [
+        "1000"
+    ],
+    "amenity:mobile_money_agent": [
+        "2000"
+    ],
+    "amenity:car_sharing": [
+        "5300"
+    ],
+    "amenity:music_school": [
+        "6100"
+    ],
+    "amenity:biergarten": [
+        "5300"
+    ],
+    "amenity:compressed_air": [
+        "4100"
+    ],
+    "amenity:animal_breeding": [
+        "9300"
+    ],
+    "amenity:ticket_validator": [
+        "4100"
+    ],
+    "amenity:lavoir": [
+        "6000"
+    ],
+    "amenity:sanitary_dump_station": [
+        "6300"
+    ],
+    "amenity:weighbridge": [
+        "2000"
+    ],
+    "amenity:prep_school": [
+        "6100"
+    ],
+    "amenity:language_school": [
+        "6100"
+    ],
+    "amenity:money_transfer": [
+        "2000"
+    ],
+    "amenity:dojo": [
+        "5380",
+        "5371"
+    ],
+    "amenity:casino": [
+        "2000"
+    ],
+    "amenity:animal_shelter": [
+        "6000"
+    ],
+    "amenity:health_post": [
+        "6500"
+    ],
+    "amenity:waste_transfer_station": [
+        "4000"
+    ],
+    "amenity:house": [
+        "1100"
+    ],
+    "amenity:conference_centre": [
+        "5140"
+    ],
+    "amenity:vacuum_cleaner": [
+        "3400"
+    ],
+    "amenity:boat_rental": [
+        "4100"
+    ],
+    "amenity:feeding_place": [
+        "6000"
+    ],
+    "amenity:boat_storage": [
+        "1000"
+    ],
+    "amenity:dressing_room": [
+        "1300"
+    ],
+    "amenity:research_institute": [
+        "6100"
+    ],
+    "amenity:love_hotel": [
+        "1300"
+    ],
+    "amenity:animal_boarding": [
+        "1000"
+    ],
+    "amenity:post_depot": [
+        "2000"
+    ],
+    "amenity:training": [
+        "2000",
+        "6100"
+    ],
+    "amenity:ranger_station": [
+        "4000",
+        "6200"
+    ],
+    "amenity:game_feeding": [
+        "5320"
+    ],
+    "amenity:gambling": [
+        "2000",
+        "5330"
+    ],
+    "amenity:smoking_area": [
+        "5000"
+    ],
+    "amenity:funeral_hall": [
+        "6700"
+    ],
+    "amenity:photo_booth": [
+        "5100",
+        "2100"
+    ],
+    "amenity:brothel": [
+        "2000"
+    ],
+    "amenity:driver_training": [
+        "7300"
+    ],
+    "amenity:mortuary": [
+        "6700"
+    ],
+    "amenity:polling_station": [
+        "6200"
+    ],
+    "amenity:water": [
+        "4000"
+    ],
+    "amenity:blood_bank": [
+        "6500"
+    ],
+    "amenity:karaoke_box": [
+        "5100"
+    ],
+    "amenity:payment_centre": [
+        "4240"
+    ],
+    "amenity:dive_centre": [
+        "5350"
+    ],
+    "amenity:hookah_lounge": [
+        "5370"
+    ],
+    "amenity:refugee_site": [
+        "1000"
+    ],
+    "amenity:dancing_school": [
+        "5110"
+    ],
+    "amenity:shop": [
+        "2000",
+        "2135",
+        "2117",
+        "2124"
+    ],
+    "amenity:animal_training": [
+        "5100"
+    ],
+    "amenity:exhibition_centre": [
+        "2000"
+    ],
+    "amenity:stripclub": [
+        "2100"
+    ],
+    "amenity:stage": [
+        "5110"
+    ],
+    "amenity:kitchen": [
+        "2000"
+    ],
+    "amenity:security_booth": [
+        "4000"
+    ],
+    "amenity:baking_oven": [
+        "2000"
+    ],
+    "amenity:give_box": [
+        "2000"
+    ],
+    "amenity:waste_basket;recycling": [
+        "2000"
+    ],
+    "amenity:device_charging_station": [
+        "2000",
+        "4230"
+    ],
+    "amenity:planetarium": [
+        "5110"
+    ],
+    "amenity:canteen": [
+        "2510"
+    ],
+    "amenity:luggage_locker": [
+        "4000"
+    ],
+    "amenity:toy_library": [
+        "5300"
+    ],
+    "amenity:dormitory": [
+        "1300"
+    ],
+    "amenity:mobile_library": [
+        "4200"
+    ],
+    "amenity:social_club": [
+        "1000"
+    ],
+    "amenity:refugee_housing": [
+        "1000"
+    ],
+    "amenity:spa": [
+        "1000",
+        "1344"
+    ],
+    "amenity:ski_rental": [
+        "5000",
+        "5350"
+    ],
+    "amenity:power_supply": [
+        "4300"
+    ],
+    "amenity:festival_grounds": [
+        "5150"
+    ],
+    "amenity:rescue_station": [
+        "6310"
+    ],
+    "amenity:marae": [
+        "6610"
+    ],
+    "amenity:camping": [
+        "5420"
+    ],
+    "amenity:music_venue": [
+        "5110"
+    ],
+    "amenity:sanatorium": [
+        "6500"
+    ],
+    "amenity:student_accommodation": [
+        "1000"
+    ],
+    "amenity:workshop": [
+        "3400"
+    ],
+    "amenity:kick-scooter_parking": [
+        "4100"
+    ],
+    "amenity:bus_stop": [
+        "4100"
+    ],
+    "amenity:ski_school": [
+        "5350"
+    ],
+    "amenity:yes": [
+        "6000"
+    ],
+    "amenity:customs": [
+        "4000"
+    ],
+    "amenity:locker": [
+        "2000"
+    ],
+    "amenity:mobility_hub": [
+        "2000"
+    ],
+    "amenity:clubhouse": [
+        "1300"
+    ],
+    "amenity:construction": [
+        "7300"
+    ],
+    "amenity:commercial": [
+        "2800",
+        "2130",
+        "2710",
+        "2117",
+        "2124",
+        "2141",
+        "2175"
+    ],
+    "amenity:public_service": [
+        "6400"
+    ],
+    "amenity:whirlpool": [
+        "5390",
+        "5378"
+    ],
+    "amenity:baby_hatch": [
+        "6500"
+    ],
+    "amenity:healthcare": [
+        "6500"
+    ],
+    "amenity:checkpoint": [
+        "4000"
+    ],
+    "amenity:place_of_mourning": [
+        "6600"
+    ],
+    "leisure:pitch": [
+        "5300"
+    ],
+    "leisure:swimming_pool": [
+        "5300",
+        "5382"
+    ],
+    "leisure:garden": [
+        "5520"
+    ],
+    "leisure:park": [
+        "5520"
+    ],
+    "leisure:playground": [
+        "5300"
+    ],
+    "leisure:picnic_table": [
+        "5000"
+    ],
+    "leisure:sports_centre": [
+        "5370"
+    ],
+    "leisure:track": [
+        "5300"
+    ],
+    "leisure:fitness_centre": [
+        "5370"
+    ],
+    "leisure:fitness_station": [
+        "5370"
+    ],
+    "leisure:stadium": [
+        "5350"
+    ],
+    "leisure:bleachers": [
+        "5350"
+    ],
+    "leisure:golf_course": [
+        "5350"
+    ],
+    "leisure:firepit": [
+        "5420"
+    ],
+    "leisure:sports_hall": [
+        "5379"
+    ],
+    "leisure:common": [
+        "5500",
+        "5370"
+    ],
+    "leisure:marina": [
+        "5360"
+    ],
+    "leisure:dog_park": [
+        "5500"
+    ],
+    "leisure:resort": [
+        "5350",
+        "5378"
+    ],
+    "leisure:horse_riding": [
+        "5350"
+    ],
+    "leisure:fishing": [
+        "9500"
+    ],
+    "leisure:sauna": [
+        "5000",
+        "5370"
+    ],
+    "leisure:beach_resort": [
+        "5360"
+    ],
+    "leisure:water_park": [
+        "5380"
+    ],
+    "leisure:dance": [
+        "5110"
+    ],
+    "leisure:miniature_golf": [
+        "5341"
+    ],
+    "leisure:ice_rink": [
+        "5390"
+    ],
+    "leisure:recreation_ground": [
+        "5510",
+        "5370"
+    ],
+    "leisure:bandstand": [
+        "5110"
+    ],
+    "leisure:amusement_arcade": [
+        "2000"
+    ],
+    "leisure:swimming_area": [
+        "5380"
+    ],
+    "leisure:schoolyard": [
+        "6120"
+    ],
+    "leisure:bowling_alley": [
+        "5381",
+        "5379"
+    ],
+    "leisure:bathing_place": [
+        "5500"
+    ],
+    "leisure:yes": [
+        "5000"
+    ],
+    "leisure:escape_game": [
+        "5370"
+    ],
+    "leisure:disc_golf_course": [
+        "5380",
+        "5341",
+        "5375"
+    ],
+    "leisure:climbing": [
+        "5370"
+    ],
+    "leisure:indoor_play": [
+        "5000"
+    ],
+    "leisure:summer_camp": [
+        "5420",
+        "6100"
+    ],
+    "leisure:trampoline_park": [
+        "5300"
+    ],
+    "leisure:hot_tub": [
+        "5000"
+    ],
+    "leisure:sport": [
+        "5379",
+        "5381"
+    ],
+    "leisure:barefoot": [
+        "5000"
+    ],
+    "leisure:wildlife_hide": [
+        "5500",
+        "5230"
+    ],
+    "leisure:social_club": [
+        "5000",
+        "5380",
+        "5379"
+    ],
+    "leisure:shooting_ground": [
+        "5380",
+        "5430",
+        "5376"
+    ],
+    "leisure:spa": [
+        "5000",
+        "5380",
+        "5379"
+    ],
+    "leisure:paddling_pool": [
+        "5000",
+        "5380",
+        "5379"
+    ],
+    "leisure:maze": [
+        "5380"
+    ],
+    "leisure:hammock": [
+        "5000",
+        "5377"
+    ],
+    "leisure:park_connector": [
+        "5300"
+    ],
+    "building:shelter": [
+        "7100"
+    ],
+    "building:wine_press_house": [
+        "3110"
+    ],
+    "building:glasshouse": [
+        "9141"
+    ],
+    "building:tomb": [
+        "6600"
+    ],
+    "building:administrative": [
+        "6200"
+    ],
+    "building:synagogue": [
+        "6610"
+    ],
+    "amenity:parking_entrance": [
+        "4100"
+    ],
+    "amenity:vehicle_inspection": [
+        "4100"
+    ],
+    "amenity:vehicle_ramp": [
+        "4100"
+    ],
+    "leisure:slipway": [
+        "4100"
+    ],
+    "building:stadium": [
+        "5370",
+        "5120"
+    ],
+    "amenity:coworking_space": [
+        "5376"
+    ],
+    "amenity:traffic_park": [
+        "5370"
+    ],
+    "leisure:bird_hide": [
+        "5510"
+    ],
+    "building:sports_hall": [
+        "5380"
+    ],
+    "amenity:table": [
+        "2650"
+    ],
+    "highway:residential": [
+        "1100"
+    ],
+    "highway:service": [
+        "2000"
+    ],
+    "highway:track": [
+        "9000"
+    ],
+    "highway:footway": [
+        "9000"
+    ],
+    "highway:unclassified": [
+        "9000"
+    ],
+    "highway:bus_stop": [
+        "1000"
+    ],
+    "highway:primary": [
+        "4100"
+    ],
+    "highway:turning_circle": [
+        "4000"
+    ],
+    "highway:living_street": [
+        "4000"
+    ],
+    "highway:stop": [
+        "4100",
+        "4138"
+    ],
+    "highway:traffic_signals": [
+        "4100"
+    ],
+    "highway:trunk": [
+        "4000"
+    ],
+    "highway:motorway": [
+        "4000",
+        "4138"
+    ],
+    "highway:motorway_link": [
+        "4000"
+    ],
+    "highway:pedestrian": [
+        "4000"
+    ],
+    "highway:trunk_link": [
+        "4000"
+    ],
+    "highway:primary_link": [
+        "4300"
+    ],
+    "highway:construction": [
+        "4000",
+        "7100"
+    ],
+    "highway:secondary_link": [
+        "4300"
+    ],
+    "highway:tertiary_link": [
+        "4300"
+    ],
+    "highway:motorway_junction": [
+        "4000",
+        "7410"
+    ],
+    "highway:milestone": [
+        "4000"
+    ],
+    "highway:speed_camera": [
+        "4200"
+    ],
+    "highway:mini_roundabout": [
+        "4000"
+    ],
+    "highway:passing_place": [
+        "4100"
+    ],
+    "highway:road": [
+        "4000"
+    ],
+    "highway:emergency_access_point": [
+        "4100"
+    ],
+    "highway:corridor": [
+        "4000"
+    ],
+    "highway:emergency_bay": [
+        "4000",
+        "4138"
+    ],
+    "highway:toll_gantry": [
+        "4100"
+    ],
+    "highway:via_ferrata": [
+        "4100"
+    ],
+    "highway:traffic_sign": [
+        "4000"
+    ],
+    "highway:escape": [
+        "4100"
+    ],
+    "highway:platform": [
+        "4100"
+    ],
+    "highway:turning_loop": [
+        "4100"
+    ],
+    "highway:bridleway": [
+        "4100"
+    ],
+    "highway:busway": [
+        "4130"
+    ],
+    "highway:raceway": [
+        "5300"
+    ],
+    "highway:services": [
+        "2174"
+    ],
+    "highway:priority": [
+        "4136"
+    ]
+}

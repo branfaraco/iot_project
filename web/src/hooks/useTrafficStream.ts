@@ -13,9 +13,7 @@ import { useEffect, useRef, useState } from "react";
  * model and converts it into a 2‑D array of numbers.
  */
 export function useTrafficStream() {
-  // Matrices for the baseline and FiLM‑conditioned models.  These
-  // matrices store classification codes (integers 0–3) or continuous
-  // values depending on what the backend sends.
+
   const [rawMatrix, setRawMatrix] = useState<number[][]>([]);
   const [enrichedMatrix, setEnrichedMatrix] = useState<number[][]>([]);
 

@@ -20,18 +20,21 @@ from shared.utils.losses import MaskedMAEFocalLoss
 from shared.utils.mask import load_mask
 
 
-
-# Set device to GPU if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Paths to data and models.  Adjust these paths if your dataset or
-# repository lives elsewhere.
-REPO_ROOT = r"C:\Users\user\UPM\Imperial-4año\IoT\Github"
-DATA_ROOT = os.path.join(REPO_ROOT, "hugging_face", "BERLIN_reduced")
-WEATHER_ROOT = os.path.join(REPO_ROOT, "hugging_face", "weather_berlin-tempel", "cleaned")
-MODELS_ROOT = os.path.join(REPO_ROOT, "models")
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+REPO_ROOT = os.environ["REPO_ROOT"]
+DATA_ROOT = os.environ["DATA_ROOT"]
+WEATHER_ROOT = os.environ["WEATHER_ROOT"]
+MODELS_ROOT = os.environ["MODEL_PARAMETERS_DIR"]
+PATH_LBCS = os.environ["LBCS_PATH"]
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PATH_LBCS = os.path.join(DATA_ROOT, "grid_lbcs-2", "lbcs_matrix.json")
+
 
 
 class TrafficDatasetEnriched(Dataset):
@@ -54,34 +57,6 @@ class TrafficDatasetEnriched(Dataset):
       number of weather variables loaded by the ``WeatherEncoder``.
       This vector is normalised using training statistics and looked
       up via timestamp alignment.
-
-    Parameters
-    ----------
-    h5_paths : list[str]
-        List of HDF5 file paths containing traffic arrays.  Each file
-        name should begin with a date in ``YYYY-MM-DD`` format which
-        is used to compute timestamps for weather lookups.
-
-    lbcs_path : str
-        Path to the JSON file containing the coarse LBCS matrix.
-
-    weather_encoder : WeatherEncoder
-        Instance of ``WeatherEncoder`` to produce weather vectors.
-
-    history_steps : int, default 12
-        Number of past frames to include in the input ``x``.
-
-    future_steps : int, default 4
-        Number of future frames to predict.  The target ``y`` will
-        have this many channels.
-
-    dataset_key : str, default "array"
-        Name of the dataset inside the HDF5 files containing the
-        traffic tensor.  For the Berlin dataset this is "array".
-
-    step_minutes : int, default 5
-        Temporal resolution of traffic frames in minutes.  Used to
-        compute timestamps when looking up weather data.
     """
 
     def __init__(

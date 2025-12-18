@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import os
+import h5py
 from datetime import datetime, timedelta
 from typing import List, Optional
 
@@ -25,27 +26,19 @@ def _load_hdf5_frames(data_dir: str) -> List[dict]:
     dataset named ``array`` from each file and extracts the frames
     corresponding to the simulation window (08:20–18:20 inclusive).
     Frames are concatenated across files to form a single list.
-
-    Any problem (missing directory, no files, invalid HDF5, etc.)
-    raises a RuntimeError instead of silently falling back.
     """
     if not os.path.isdir(data_dir):
         raise RuntimeError(
             f"[traffic_generator] TRAFFIC_DATA_PATH directory not found: {data_dir}"
         )
 
-    try:
-        import h5py
-    except ImportError as e:
-        raise RuntimeError(
-            "[traffic_generator] h5py is required to load traffic HDF5 files but is not installed"
-        ) from e
 
     frames: List[dict] = []
 
     # Collect all .h5 files and sort them for reproducibility
     files = [f for f in os.listdir(data_dir) if f.lower().endswith(".h5")]
     files.sort()
+    
     if not files:
         raise RuntimeError(
             f"[traffic_generator] No .h5 files found in directory: {data_dir}"
@@ -63,22 +56,14 @@ def _load_hdf5_frames(data_dir: str) -> List[dict]:
         try:
             with h5py.File(path, "r") as f:
                 arr = f["array"][()]  # (T, 495, 436, 8)
-            print(
-                f"[traffic_generator] Loaded file {fname} with shape {arr.shape}")
+            print(f"[traffic_generator] Loaded file {fname} with shape {arr.shape}")
 
-            # 1) Temporal crop: [T_START, T_END)
+            # Apply the temporal crop only; spatial cropping and normalisation
+            # are now handled in the backend.  This reduces the number of
+            # frames per day but preserves the full spatial extent and raw
+            # integer values.
             arr = dr.temporal_crop(arr, dr.T_START, dr.T_END)
-            print(
-                f"[traffic_generator] After temporal crop {fname}: {arr.shape}")
-
-            # 2) Spatial crop: subgrid defined by r0,r1,c0,c1
-            arr = dr.spatial_crop(arr, dr.r0, dr.r1, dr.c0, dr.c1)
-            print(
-                f"[traffic_generator] After spatial crop {fname}: {arr.shape}")
-
-            # 3) Normalize to [0,1] float32
-            arr = dr.normalize(arr)
-            print(f"[traffic_generator] After normalize {fname}: {arr.shape}")
+            print(f"[traffic_generator] After temporal crop {fname}: {arr.shape}")
 
         except Exception as e:
             raise RuntimeError(

@@ -3,13 +3,8 @@
 import os
 import torch
 
-try:
-    from shared.models.unet_film import UNet2D_FiLM
-except ImportError as e:
-    raise ImportError(
-        "Unable to import UNet2D_FiLM from shared.models. Ensure that you "
-        "have moved your FiLM U‑Net implementation into the shared package."
-    ) from e
+from shared.models.unet_film import UNet2D_FiLM
+
 
 
 def load_enriched_model(
@@ -20,27 +15,6 @@ def load_enriched_model(
 ) -> UNet2D_FiLM:
     """
     Create and return the FiLM-conditioned U-Net model with pretrained weights.
-
-    Parameters
-    ----------
-    device : torch.device
-        The device on which the model should reside (CPU or CUDA).
-    weather_dim : int, optional
-        The number of features in the weather vector. If not provided,
-        defaults to 12. Ensure this matches your WeatherEncoder.
-    parameters_dir : str, optional
-        Path to the directory containing the weight file. If not provided,
-        the environment variable MODEL_PARAMETERS_DIR or backend/parameters
-        will be used.
-    weights_name : str, optional
-        Name of the weight file inside parameters_dir. If not provided,
-        the environment variable ENRICHED_MODEL_WEIGHTS or
-        'enriched_model.pth' will be used.
-
-    Returns
-    -------
-    UNet2D_FiLM
-        The loaded model in eval mode.
     """
     if weather_dim is None:
         weather_dim = 12

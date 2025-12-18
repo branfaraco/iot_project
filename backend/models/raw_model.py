@@ -3,15 +3,8 @@
 import os
 import torch
 
-try:
-    # Import the model architecture from the shared package.
-    from shared.models.unet_base import UNet2D
-except ImportError as e:
-    raise ImportError(
-        "Unable to import UNet2D from shared.models. Make sure the shared "
-        "package is on the Python path and that the model definitions "
-        "have been moved out of your training scripts."
-    ) from e
+
+from shared.models.unet_base import UNet2D
 
 
 def load_raw_model(
@@ -21,24 +14,6 @@ def load_raw_model(
 ) -> UNet2D:
     """
     Create and return the baseline U-Net model with pretrained weights.
-
-    Parameters
-    ----------
-    device : torch.device
-        The device on which the model should reside (CPU or CUDA).
-    parameters_dir : str, optional
-        Path to the directory containing the weight file. If not provided,
-        the environment variable MODEL_PARAMETERS_DIR or a default
-        backend/parameters directory will be used.
-    weights_name : str, optional
-        Name of the weight file inside parameters_dir. If not provided,
-        the environment variable RAW_MODEL_WEIGHTS or 'raw_model.pth'
-        will be used.
-
-    Returns
-    -------
-    UNet2D
-        The loaded model in eval mode.
     """
     # Determine where to load weights from.
     if parameters_dir is None:

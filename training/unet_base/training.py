@@ -13,10 +13,18 @@ from shared.utils.indexing import build_time_index
 from shared.utils.losses import MaskedMAEFocalLoss
 from shared.utils.mask import load_mask
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+REPO_ROOT = os.environ["REPO_ROOT"]
+DATA_ROOT = os.environ["DATA_ROOT"]
+MODELS_ROOT = os.environ["MODEL_PARAMETERS_DIR"]
+
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DATA_ROOT = r"C:\Users\user\UPM\Imperial-4año\IoT\Github\hugging_face\BERLIN_reduced"
-MODELS_ROOT = r"C:\Users\user\UPM\Imperial-4año\IoT\Github\models"
-REPO_ROOT = r"C:\Users\user\UPM\Imperial-4año\IoT\Github"
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class TrafficDataset(Dataset):

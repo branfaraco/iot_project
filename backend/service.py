@@ -1,7 +1,4 @@
-"""
-Backend service: consumes traffic + weather streams, runs models and
-streams predictions + loss history.
-"""
+
 
 from __future__ import annotations
 
@@ -26,7 +23,7 @@ from shared.utils.lbcs import load_lbcs_onehot
 from shared.utils.weather_encoder import WeatherEncoder
 from shared.utils.mask import load_mask
 
-from .utils import prepare_inputs_raw, prepare_inputs_enriched  # noqa: F401
+from .utils import prepare_inputs_raw, prepare_inputs_enriched, preprocess_frame
 
 from dotenv import load_dotenv
 
@@ -41,25 +38,18 @@ def log(msg: str) -> None:
 # Config
 # ---------------------------------------------------------------------------
 
-DATA_ROOT = os.environ.get("DATA_ROOT")
-WEATHER_ROOT = os.environ.get(
-    "WEATHER_ROOT")
-LBCS_PATH = os.environ.get(
-    "LBCS_PATH")
-MODELS_DIR = os.environ.get(
-    "MODEL_PARAMETERS_DIR")
+DATA_ROOT = os.environ["DATA_ROOT"]
+WEATHER_ROOT = os.environ["WEATHER_ROOT"]
+LBCS_PATH = os.environ["LBCS_PATH"]
+MODELS_DIR = os.environ["MODEL_PARAMETERS_DIR"]
 
 
 HISTORY_STEPS = 12
 FUTURE_STEPS = 4
 LBCS_CHANNELS = 9
 
-TRAFFIC_GENERATOR_URL = os.environ.get(
-    "TRAFFIC_GENERATOR_URL"
-)
-WEATHER_GENERATOR_URL = os.environ.get(
-    "WEATHER_GENERATOR_URL"
-)
+TRAFFIC_GENERATOR_URL = os.environ["TRAFFIC_GENERATOR_URL"]
+WEATHER_GENERATOR_URL = os.environ["WEATHER_GENERATOR_URL"]
 
 
 def build_lbcs_hist(H: int, W: int) -> np.ndarray:
@@ -260,7 +250,9 @@ async def traffic_receiver(state: Any) -> None:
             frame_list = data.get("frame")
             if frame_list is None:
                 continue
-            arr = np.asarray(frame_list, dtype=np.float32)
+            # Convert the nested list to an array, then crop and normalise.
+            arr_raw = np.asarray(frame_list, dtype=np.float32)
+            arr = preprocess_frame(arr_raw)
             state.traffic_frames.append(arr)
             state.traffic_timestamps.append(data.get("timestamp", ""))
             idx = len(state.traffic_frames) - 1
@@ -415,8 +407,6 @@ async def prediction_stream(websocket: WebSocket) -> None:
 
             # Strict weather vector based on history timestamp (no zero fallbacks)
             weather_vec = build_weather_vec_for_history_index(state)
-            log(f"[predict] weather_vec len={len(weather_vec)}")
-
             log(f"[predict] weather_vec len={len(weather_vec)}")
 
             sample = {
